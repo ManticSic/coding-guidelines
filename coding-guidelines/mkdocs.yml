@@ -1,0 +1,18 @@
+site_name: Coding Guidelines
+
+theme:
+    name: readthedocs
+    prev_next_buttons_location: both
+    custom_dir: custom_theme/
+
+extra_css:
+    - css/version.css
+    - css/table.css
+
+site_auther: Darius Weber
+copyright: Copyright © 2021 Darius Weber
+repo_url: https://github.com/ManticSic/coding-guidelines
+repo_name: GitHub
+
+extra:
+    version: 0.0.0-dev

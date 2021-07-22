@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+
+{%- block site_name %}
+    <a href="{{ nav.homepage.url|url }}" class="icon icon-home"> {{ config.site_name }}</a>
+    <div class="custom-version-label">Version: {{ config.extra.version }}</div>
+{%- endblock %}
