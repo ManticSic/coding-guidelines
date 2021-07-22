@@ -1,0 +1,8 @@
+# ignore IDEs
+.idea/
+
+# ignore virutal environment
+.venv/
+
+# ignore mkdocs
+site/
