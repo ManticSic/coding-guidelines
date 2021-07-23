@@ -16,3 +16,6 @@ repo_name: GitHub
 
 extra:
     version: 0.0.0-dev
+
+nav:
+    - Einleitung: index.md
