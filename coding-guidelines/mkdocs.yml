@@ -19,3 +19,6 @@ extra:
 
 nav:
     - Einleitung: index.md
+    - Guidelines:
+            - General:
+                    - Version Control: guidelines/general/11000.md
