@@ -10,7 +10,7 @@ extra_css:
     - css/table.css
 
 site_auther: Darius Weber
-copyright: Copyright © 2021 Darius Weber
+copyright: This work © 2021 by Darius Weber under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank" rel="noopener noreferrer">GNU GPLv3</a>
 repo_url: https://github.com/ManticSic/coding-guidelines
 repo_name: GitHub
 
