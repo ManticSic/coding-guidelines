@@ -25,3 +25,6 @@ nav:
                     - Namenskonvention: guidelines/general/14000.md
                     - Maintainability: guidelines/general/15000.md
                     - Dokumentation: guidelines/general/16000.md
+
+plugins:
+    - search: {}
