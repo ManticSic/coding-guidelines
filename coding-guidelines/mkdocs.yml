@@ -1,21 +1,19 @@
 site_name: Coding Guidelines
 
 theme:
-    name: readthedocs
-    prev_next_buttons_location: both
-    custom_dir: custom_theme/
+    name: material
+    favicon: img/favicon.ico
+    icon:
+        repo: fontawesome/brands/github
+    features:
+        - navigation.instant
+        - navigation.tabs
+        - navigation.top
 
-extra_css:
-    - css/version.css
-    - css/table.css
-
-site_auther: Darius Weber
 copyright: This work © 2021 by Darius Weber under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank" rel="noopener noreferrer">GNU GPLv3</a>
 repo_url: https://github.com/ManticSic/coding-guidelines
 repo_name: GitHub
-
-extra:
-    version: 0.0.0-dev
+edit_uri: edit/main/coding-guidelines/docs/
 
 nav:
     - Einleitung: index.md
