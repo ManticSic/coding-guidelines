@@ -16,15 +16,15 @@ repo_name: GitHub
 edit_uri: edit/main/coding-guidelines/docs/
 
 nav:
-    - Einleitung: index.md
+    - Introduction: index.md
     - Guidelines:
             - General:
                     - Version Control: guidelines/general/11000.md
                     - Updates Policy: guidelines/general/12000.md
-                    - Tools und Automatismen: guidelines/general/13000.md
-                    - Namenskonvention: guidelines/general/14000.md
+                    - Tools and Automation: guidelines/general/13000.md
+                    - Namming Conventions: guidelines/general/14000.md
                     - Maintainability: guidelines/general/15000.md
-                    - Dokumentation: guidelines/general/16000.md
+                    - Documentation: guidelines/general/16000.md
 
 plugins:
     - search: {}
@@ -34,3 +34,9 @@ plugins:
           languages:
               en: English
               de: Deutsch
+          nav_translations:
+              de:
+                  Introduction: Einleitung
+                  Tools and Automation: Tools und Automatisierung
+                  Namming Conventions: Namenskonvention
+                  Documentation: Dokumentation
