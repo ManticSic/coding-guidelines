@@ -1,0 +1,1033 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
+    
+    
+      
+        <title>Maintainability - Coding Guidelines</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#maintainability" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Coding Guidelines" class="md-header__button md-logo" aria-label="Coding Guidelines" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Coding Guidelines
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Maintainability
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../../" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="../../../de/" hreflang="de" class="md-select__link">
+                    Deutsch
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/ManticSic/coding-guidelines/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Introduction
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../11000/" class="md-tabs__link md-tabs__link--active">
+        Guidelines
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Coding Guidelines" class="md-nav__button md-logo" aria-label="Coding Guidelines" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Coding Guidelines
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/ManticSic/coding-guidelines/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Guidelines
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Guidelines" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Guidelines
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      <label class="md-nav__link" for="__nav_2_1">
+        General
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="General" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11000/" class="md-nav__link">
+        Version Control
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12000/" class="md-nav__link">
+        Update Policy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13000/" class="md-nav__link">
+        Tools and Automation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14000/" class="md-nav__link">
+        Namming Conventions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Maintainability
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Maintainability
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#eine-methode-sollte-nicht-mehr-als-7-statements-haben-gcg15001" class="md-nav__link">
+    Eine Methode sollte nicht mehr als 7 Statements haben (GCG15001) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-geschlossen-wie-moglich-so-offen-wie-notig-gcg15002" class="md-nav__link">
+    So geschlossen wie möglich, so offen wie nötig (GCG15002) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vermeidung-von-ausdrucken-mit-doppelter-negierung-gcg15003" class="md-nav__link">
+    Vermeidung von Ausdrücken mit doppelter Negierung (GCG15003) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ein-typ-eine-datei-gcg15004" class="md-nav__link">
+    Ein Typ, eine Datei (GCG15004) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dont-use-magic-numbers-gcg15005" class="md-nav__link">
+    Don't use magic numbers (GCG15005) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explizit-statt-implizit-gcg15006" class="md-nav__link">
+    Explizit, statt Implizit (GCG15006) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variablen-sollten-so-spat-wie-moglich-deklariert-und-initialisiert-werden-gcg15007" class="md-nav__link">
+    Variablen sollten so spät wie möglich deklariert und initialisiert werden (GCG15007) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deklariere-und-weise-immer-nur-eine-variable-pro-zeile-zu-gcg15008" class="md-nav__link">
+    Deklariere und Weise immer nur eine Variable pro Zeile zu (GCG15008) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keine-explizite-vergleiche-auf-true-und-false-gcg15009" class="md-nav__link">
+    Keine explizite Vergleiche auf True und False (GCG15009) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verandere-nicht-die-loop-variable-innerhalb-eines-for-loops-gcg15010" class="md-nav__link">
+    Verändere nicht die Loop-Variable innerhalb eines for-Loops (GCG15010) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vermeide-verschachtelte-loops-gcg15011" class="md-nav__link">
+    Vermeide verschachtelte Loops (GCG15011) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuge-immer-den-default-block-nach-dem-letzten-case-in-einem-switch-statement-hinzu-gcg15012" class="md-nav__link">
+    Füge immer den default-Block nach dem letzten case in einem switch-Statement hinzu (GCG15012) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beende-jedes-if-else-if-statement-mit-einem-else-statement-gcg15013" class="md-nav__link">
+    Beende jedes if-else-if-Statement mit einem else-Statement (GCG15013) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verwende-ein-einfaches-conditional-assignment-statement-statt-einem-if-else-konstrukt-gcg15013" class="md-nav__link">
+    Verwende ein einfaches Conditional Assignment Statement, statt einem if-else-Konstrukt (GCG15013) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verwende-switch-statements-statt-if-else-statement-gcg15014" class="md-nav__link">
+    Verwende switch-Statements, statt if-else-Statement (GCG15014) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vermeide-signaturen-mit-mehr-als-3-parametern-gcg15015" class="md-nav__link">
+    Vermeide Signaturen mit mehr als 3 Parametern (GCG15015) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vermeide-signaturen-die-einen-bool-parameter-haben-gcg15016" class="md-nav__link">
+    Vermeide Signaturen, die einen bool-Parameter haben (GCG15016) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kommentiere-niemals-code-aus-gcg15017" class="md-nav__link">
+    Kommentiere niemals Code aus (GCG15017) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schreib-code-der-leicht-zu-debuggen-ist-gcg15018" class="md-nav__link">
+    Schreib code, der leicht zu debuggen ist (GCG15018) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uberladungen-sollten-sich-gegenseitig-aufrufen-gcg15019" class="md-nav__link">
+    Überladungen sollten sich gegenseitig aufrufen (GCG15019) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lagere-komplexe-ausdrucke-in-separaten-methoden-aus-gcg15020" class="md-nav__link">
+    Lagere komplexe Ausdrücke in separaten Methoden aus (GCG15020) 
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16000/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#eine-methode-sollte-nicht-mehr-als-7-statements-haben-gcg15001" class="md-nav__link">
+    Eine Methode sollte nicht mehr als 7 Statements haben (GCG15001) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-geschlossen-wie-moglich-so-offen-wie-notig-gcg15002" class="md-nav__link">
+    So geschlossen wie möglich, so offen wie nötig (GCG15002) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vermeidung-von-ausdrucken-mit-doppelter-negierung-gcg15003" class="md-nav__link">
+    Vermeidung von Ausdrücken mit doppelter Negierung (GCG15003) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ein-typ-eine-datei-gcg15004" class="md-nav__link">
+    Ein Typ, eine Datei (GCG15004) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dont-use-magic-numbers-gcg15005" class="md-nav__link">
+    Don't use magic numbers (GCG15005) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explizit-statt-implizit-gcg15006" class="md-nav__link">
+    Explizit, statt Implizit (GCG15006) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variablen-sollten-so-spat-wie-moglich-deklariert-und-initialisiert-werden-gcg15007" class="md-nav__link">
+    Variablen sollten so spät wie möglich deklariert und initialisiert werden (GCG15007) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deklariere-und-weise-immer-nur-eine-variable-pro-zeile-zu-gcg15008" class="md-nav__link">
+    Deklariere und Weise immer nur eine Variable pro Zeile zu (GCG15008) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keine-explizite-vergleiche-auf-true-und-false-gcg15009" class="md-nav__link">
+    Keine explizite Vergleiche auf True und False (GCG15009) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verandere-nicht-die-loop-variable-innerhalb-eines-for-loops-gcg15010" class="md-nav__link">
+    Verändere nicht die Loop-Variable innerhalb eines for-Loops (GCG15010) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vermeide-verschachtelte-loops-gcg15011" class="md-nav__link">
+    Vermeide verschachtelte Loops (GCG15011) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuge-immer-den-default-block-nach-dem-letzten-case-in-einem-switch-statement-hinzu-gcg15012" class="md-nav__link">
+    Füge immer den default-Block nach dem letzten case in einem switch-Statement hinzu (GCG15012) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beende-jedes-if-else-if-statement-mit-einem-else-statement-gcg15013" class="md-nav__link">
+    Beende jedes if-else-if-Statement mit einem else-Statement (GCG15013) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verwende-ein-einfaches-conditional-assignment-statement-statt-einem-if-else-konstrukt-gcg15013" class="md-nav__link">
+    Verwende ein einfaches Conditional Assignment Statement, statt einem if-else-Konstrukt (GCG15013) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verwende-switch-statements-statt-if-else-statement-gcg15014" class="md-nav__link">
+    Verwende switch-Statements, statt if-else-Statement (GCG15014) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vermeide-signaturen-mit-mehr-als-3-parametern-gcg15015" class="md-nav__link">
+    Vermeide Signaturen mit mehr als 3 Parametern (GCG15015) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vermeide-signaturen-die-einen-bool-parameter-haben-gcg15016" class="md-nav__link">
+    Vermeide Signaturen, die einen bool-Parameter haben (GCG15016) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kommentiere-niemals-code-aus-gcg15017" class="md-nav__link">
+    Kommentiere niemals Code aus (GCG15017) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schreib-code-der-leicht-zu-debuggen-ist-gcg15018" class="md-nav__link">
+    Schreib code, der leicht zu debuggen ist (GCG15018) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uberladungen-sollten-sich-gegenseitig-aufrufen-gcg15019" class="md-nav__link">
+    Überladungen sollten sich gegenseitig aufrufen (GCG15019) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lagere-komplexe-ausdrucke-in-separaten-methoden-aus-gcg15020" class="md-nav__link">
+    Lagere komplexe Ausdrücke in separaten Methoden aus (GCG15020) 
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ManticSic/coding-guidelines/edit/main/coding-guidelines/docs/guidelines/general/15000.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <p><strong>en Translation coming soon</strong></p>
+<h1 id="maintainability">Maintainability</h1>
+<h2 id="eine-methode-sollte-nicht-mehr-als-7-statements-haben-gcg15001">Eine Methode sollte nicht mehr als 7 Statements haben (GCG15001) <img src="/img/1.png" alt="recommendation level 1" /></h2>
+<p>Eine Methode mit mehr als sieben Statements macht zu viel oder verstößt gegen
+das <a href="https://en.wikipedia.org/wiki/Single-responsibility_principle">Single Responsibility Principle</a>. Außerdem wird es mit jedem Statement
+aufwändiger zu verstehen, was der Code machen soll. Eine Methode mit mehr
+Statements sollte entsprechend in mehrere kleine Methoden, die einen 
+selbsterklärenden Namen haben, runtergebrochen werden. Der High-Level
+Algorithmus muss allerdings weiterhin verständlich sein.</p>
+<p>Eine Ausnahme hierbei können Tests, Builder oder Methoden, die den
+Anwendungsfluss steuern sein. Es sollte dennoch geprüft werden, ob die Anzahl
+der Statements pro Methode durch Pattern oder verschachtelte Prüfungen reduziert
+werden können, wodurch die Verständlichkeit und Wartbarkeit gesteigert werden
+kann.</p>
+<h2 id="so-geschlossen-wie-moglich-so-offen-wie-notig-gcg15002">So geschlossen wie möglich, so offen wie nötig (GCG15002) <img src="/img/1.png" alt="recommendation level 1" /></h2>
+<p>Alle Typen und Member sollten standardmäßig nur von denen gesehen und genutzt
+werden können, die auf diese Typen und Member direkt zugreifen müssen.
+Entsprechend sollten Member standardmäßig <code>private</code> und Typen <code>internal</code> sein.</p>
+<p>Außerdem sollten standardmäßig weder Member noch Typen überschrieben oder beerbt
+werden können.</p>
+<p>Nur für den Fall, dass von Außen auf einen Typen oder dessen Member zugegriffen
+werden muss, sollte die Sichtbarkeit langsam erhöht werden.</p>
+<h2 id="vermeidung-von-ausdrucken-mit-doppelter-negierung-gcg15003">Vermeidung von Ausdrücken mit doppelter Negierung (GCG15003) <img src="/img/2.png" alt="recommendation level 2" /></h2>
+<p>In manchen Fällen ist es sinnvoll, oder gegeben, dass eine Variable bzw. ein
+Typen-Member den Negativfall abdeckt, allerdings sollte es vermieden werden,
+diese in einer negierten Bedingung zu verwenden.</p>
+<pre><code>bool hasOrders = !customer.HasNoOrders;
+</code></pre>
+<p>Doppelte Verneinungen sind schwerer zu verstehen und werden oft überlesen.</p>
+<h2 id="ein-typ-eine-datei-gcg15004">Ein Typ, eine Datei (GCG15004) <img src="/img/2.png" alt="recommendation level 2" /></h2>
+<p>Eine Source-Datei sollte genau einen Typen enthalten, bzw. einen Zweck dienen.</p>
+<p>Die Datei sollte auch nach diesem Typen benannt sein.</p>
+<p><strong>Ausnahme: </strong> Nested-Types sollten Teil der Datei des übergeordneten Typen sein.</p>
+<p><strong>Ausnahme: </strong> Typen, die sich nur durch die Anzahl an generischen Typ-Parametern
+unterscheiden, sollten Teil der gleichen Datei sein.</p>
+<h2 id="dont-use-magic-numbers-gcg15005">Don't use magic numbers (GCG15005) <img src="/img/1.png" alt="recommendation level 1" /></h2>
+<p>Vermeide die Verwendung von Literal Values, sowohl Zahlen als auch Strings.
+Stattdessen sollten Konstanten verwendet werden.</p>
+<p>Ausgenommen sind Strings für das Logging, sowie Werte, die durch ihren Context
+eindeutig sind und zukünftig nicht geändert werden.</p>
+<pre><code>mean = (a + b) / 2; // okay
+WaitMilliseconds(waitTimeInSeconds * 1000); // clear enough
+</code></pre>
+<p><strong>Anmerkung: </strong> Enum-Typen eigenen sich oft für Konstanten genutzt werden.</p>
+<h2 id="explizit-statt-implizit-gcg15006">Explizit, statt Implizit (GCG15006) <img src="/img/1.png" alt="recommendation level 1" /></h2>
+<p>Die Deklarierung sollte immer so explizit wie möglich sein.</p>
+<h2 id="variablen-sollten-so-spat-wie-moglich-deklariert-und-initialisiert-werden-gcg15007">Variablen sollten so spät wie möglich deklariert und initialisiert werden (GCG15007) <img src="/img/2.png" alt="recommendation level 2" /></h2>
+<p>Variablen sollten zu dem Zeitpunkt deklariert und initialisiert werden, an dem
+sie gebraucht werden.</p>
+<h2 id="deklariere-und-weise-immer-nur-eine-variable-pro-zeile-zu-gcg15008">Deklariere und Weise immer nur eine Variable pro Zeile zu (GCG15008) <img src="/img/2.png" alt="recommendation level 2" /></h2>
+<p>Vermeide Ausdrücke wie</p>
+<pre><code>var result = otherVariable = GetSomeValue();
+</code></pre>
+<h2 id="keine-explizite-vergleiche-auf-true-und-false-gcg15009">Keine explizite Vergleiche auf <code>True</code> und <code>False</code> (GCG15009) <img src="/img/1.png" alt="recommendation level 1" /></h2>
+<pre><code>if (condition == false) // wrong; bad style  
+if (condition != true) // also wrong  
+if (((condition == true) == true) == true) // where do you stop?  
+if (condition) // OK
+</code></pre>
+<h2 id="verandere-nicht-die-loop-variable-innerhalb-eines-for-loops-gcg15010">Verändere nicht die Loop-Variable innerhalb eines <code>for</code>-Loops (GCG15010) <img src="/img/2.png" alt="recommendation level 2" /></h2>
+<p>Das Updaten der Loop-Variablen innerhalb des Loops für in aller Regel zu
+Verwirrung, besonders, wenn sie an mehr als einer Stelle verändert wird.</p>
+<pre><code>for (int index = 0; index &lt; 10; index++)  
+{  
+    if (someCondition)
+    {
+        index = 11; // Wrong! Use 'break' or 'continue' instead.  
+    }
+}
+</code></pre>
+<h2 id="vermeide-verschachtelte-loops-gcg15011">Vermeide verschachtelte Loops (GCG15011) <img src="/img/2.png" alt="recommendation level 2" /></h2>
+<p>Methoden mit verschachtelten Loops ist schwerer zu verstehen, als eine Methode
+mit nur einem Loop. Werden verschachtelte Loops benötigt, sollten diese durch
+andere Mittel ersetzt werden, oder in mehrere Methoden aufgeteilt werden.</p>
+<h2 id="fuge-immer-den-default-block-nach-dem-letzten-case-in-einem-switch-statement-hinzu-gcg15012">Füge immer den <code>default</code>-Block nach dem letzten <code>case</code> in einem <code>switch</code>-Statement hinzu (GCG15012) <img src="/img/1.png" alt="recommendation level 1" /></h2>
+<p>Wenn der <code>default</code>-Block leer gelassen werden soll, dann füge ein
+aussagekräftiges Kommentar hinzu. Wenn der Block nicht erreicht werden darf,
+dann wird eine Exception, um zukünftige Änderungen zu erkennen, die bisher nicht
+erwartet werden.</p>
+<h2 id="beende-jedes-if-else-if-statement-mit-einem-else-statement-gcg15013">Beende jedes <code>if</code>-<code>else</code>-<code>if</code>-Statement mit einem <code>else</code>-Statement (GCG15013) <img src="/img/2.png" alt="recommendation level 2" /></h2>
+<p>Verwende den letzten <code>else</code>-Block für das Standardverhalten. Wenn dieser Block
+nicht erreicht werden kann oder darf, dann wird eine Exception.</p>
+<h2 id="verwende-ein-einfaches-conditional-assignment-statement-statt-einem-if-else-konstrukt-gcg15013">Verwende ein einfaches Conditional Assignment Statement, statt einem <code>if</code>-<code>else</code>-Konstrukt (GCG15013) <img src="/img/2.png" alt="recommendation level 2" /></h2>
+<pre><code>// rather than:
+bool isPositive;
+
+if (value &gt; 0)
+{
+    isPositive = true;
+}
+else
+{
+    isPositive = false;
+}
+
+// write:
+bool isPositive = (value &gt; 0);
+</code></pre>
+<h2 id="verwende-switch-statements-statt-if-else-statement-gcg15014">Verwende <code>switch</code>-Statements, statt <code>if</code>-<code>else</code>-Statement (GCG15014) <img src="/img/3.png" alt="recommendation level 3" /></h2>
+<p>In vielen Fällen kann ein <code>switch</code>-Statement ein <code>if</code>-<code>else</code>-Statement ablösen
+und es dadurch verständlicher und wartbarer gestalten.</p>
+<h2 id="vermeide-signaturen-mit-mehr-als-3-parametern-gcg15015">Vermeide Signaturen mit mehr als 3 Parametern (GCG15015) <img src="/img/1.png" alt="recommendation level 1" /></h2>
+<p>Um Konstruktoren, Methoden, Funktionen etc. klein und fokussiert zu halten, muss
+die Anzahl der Parameter gering gehalten werden. Es empfiehlt sich, die Anzahl
+auf drei Parameter zu beschränken.</p>
+<p>Konstruktoren, zum Erstellen von Typen, die mehrere Parameter erwarten, können
+z. B. durch das Builder-Pattern vereinfacht werden.</p>
+<p>Generell gilt, desto weniger Parameter, umso einfacher und verständlicher ist
+die Methode. Außerdem resultiert das Testen von Methoden, die viele Parameter
+erwarten, in vielen Szenarien, die abgedeckt werden müssen.</p>
+<h2 id="vermeide-signaturen-die-einen-bool-parameter-haben-gcg15016">Vermeide Signaturen, die einen <code>bool</code>-Parameter haben (GCG15016) <img src="/img/2.png" alt="recommendation level 2" /></h2>
+<p>Folgendes Beispiel:</p>
+<pre><code>public Customer CreateCustomer(bool hasPlatinumLevel) {} 
+</code></pre>
+<p>Auf den ersten Blick wirkt die Signatur verständlich, aber sobald die Methode
+verwendet wird, geht die Verständlichkeit verloren:</p>
+<pre><code>Customer customer = CreateCustomer(true); 
+</code></pre>
+<p>Oft macht eine Methode, die einen Boolean erwartet mehr als eine Sache.
+Eine Alternative ist es, den Boolean mit einer Enumeration zu ersetzen.</p>
+<h2 id="kommentiere-niemals-code-aus-gcg15017">Kommentiere niemals Code aus (GCG15017) <img src="/img/1.png" alt="recommendation level 1" /></h2>
+<p>Veröffentliche niemals eine Änderung, in der Code auskommentiert ist.
+Niemand wird wissen, weshalb der Code auskommentiert ist. Wurde es temporär zum
+Testen entfernt? Ist es ein kopiertes Beispiel? Kann der Code gelöscht werden?</p>
+<h2 id="schreib-code-der-leicht-zu-debuggen-ist-gcg15018">Schreib code, der leicht zu debuggen ist (GCG15018) <img src="/img/1.png" alt="recommendation level 1" /></h2>
+<p>Vermeide es, zu viele Statements innerhalb einer einzigen Zeile zu schreiben.
+Dadurch können Debugger effektiver genutzt werden.</p>
+<h2 id="uberladungen-sollten-sich-gegenseitig-aufrufen-gcg15019">Überladungen sollten sich gegenseitig aufrufen (GCG15019) <img src="/img/2.png" alt="recommendation level 2" /></h2>
+<p>Diese Regel betrifft nur Überladungen, die optionale Parameter bereitstellen.</p>
+<pre><code>public string ToString()
+{
+    return ToString(Format.Default);
+}
+
+public string ToString(Format format)
+{
+    return ToString(format, Culture.Default);
+}
+
+public string ToString(Format format, Culture culture)
+{
+    // return result
+}
+</code></pre>
+<h2 id="lagere-komplexe-ausdrucke-in-separaten-methoden-aus-gcg15020">Lagere komplexe Ausdrücke in separaten Methoden aus (GCG15020) <img src="/img/1.png" alt="recommendation level 1" /></h2>
+<p>Komplexe Ausdrücke, z. B. Bedingungen, sollten in Methoden mit eindeutigen
+Namen ausgelagert werden, damit diese verständlicher werden.</p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2021-08-04
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../14000/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Namming Conventions" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Namming Conventions
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../16000/" class="md-footer__link md-footer__link--next" aria-label="Next: Documentation" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Documentation
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            This work © 2021 by Darius Weber under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank" rel="noopener noreferrer">GNU GPLv3</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.716f8af4.min.js"></script>
+      
+    
+  </body>
+</html>
