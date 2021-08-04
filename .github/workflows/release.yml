@@ -1,0 +1,71 @@
+# Workflow to build an publish to gh-pages
+
+name: Release
+
+on:
+  create:
+    tags: release/(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)
+
+jobs:
+  # build the site
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # check-out repository to $GITHUB_WORKSPACE
+      - name: Check-out source
+        uses: actions/checkout@v2
+        with:
+          ref: main
+
+      # setup python 3.x
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      # run pip install
+      - name: Install Dependencies
+        run: |
+          pip install -r requierments.txt
+
+      # build the site
+      - name: Build page
+        working-directory: coding-guidelines
+        run: |
+          mkdocs build
+
+      # upload build artifacts to action
+      - name: Upload site
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: site
+          path: ${{ github.workspace }}/coding-guidelines/site
+
+  # publish the site to gh-pages
+  publish:
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    steps:
+      # check-out source, to provide a repository for github-pages-deploy-action
+      - name: Check-out source
+        uses: actions/checkout@v2
+        with:
+          ref: main
+
+      # download the build artifact of the page
+      - name: Download site
+        uses: actions/download-artifact@v2.0.10
+        with:
+          name: site
+          path: ${{ github.workspace }}/publish
+
+      # publish to gh-pages
+      - name: Publish to gh-pages
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: ghpages
+          folder: ${{ github.workspace }}/publish
+          clean: true
+          clean-exclude: |
+            CNAME
