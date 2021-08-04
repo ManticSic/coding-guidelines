@@ -20,7 +20,7 @@ nav:
     - Guidelines:
             - General:
                     - Version Control: guidelines/general/11000.md
-                    - Updates Policy: guidelines/general/12000.md
+                    - Update Policy: guidelines/general/12000.md
                     - Tools and Automation: guidelines/general/13000.md
                     - Namming Conventions: guidelines/general/14000.md
                     - Maintainability: guidelines/general/15000.md
