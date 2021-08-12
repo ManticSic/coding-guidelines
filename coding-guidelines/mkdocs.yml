@@ -25,6 +25,7 @@ nav:
           - Namming Conventions: guidelines/general/14000.md
           - Maintainability: guidelines/general/15000.md
           - Documentation: guidelines/general/16000.md
+          - Exceptions and Process Termination: guidelines/general/18000.md
 
 plugins:
   - search: { }
@@ -40,3 +41,4 @@ plugins:
           Tools and Automation: Tools und Automatisierung
           Namming Conventions: Namenskonvention
           Documentation: Dokumentation
+          Exceptions and Process Termination: Exceptions und Prozessbeendigung
