@@ -25,6 +25,7 @@ nav:
           - Namming Conventions: guidelines/general/14000.md
           - Maintainability: guidelines/general/15000.md
           - Documentation: guidelines/general/16000.md
+          - Logging: guidelines/general/17000.md
 
 plugins:
   - search: { }
