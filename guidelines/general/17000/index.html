@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="de" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -9,19 +9,19 @@
       
       
       
-      <link rel="icon" href="../img/favicon.ico">
+      <link rel="icon" href="../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
     
     
       
-        <title>Einleitung - Coding Guidelines</title>
+        <title>Logging - Coding Guidelines</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1118c9be.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1118c9be.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ba0d045b.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ba0d045b.min.css">
         
       
     
@@ -53,7 +53,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -61,8 +61,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#einleitung" class="md-skip">
-          Zum Inhalt
+        <a href="#logging" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -72,7 +72,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Coding Guidelines" class="md-header__button md-logo" aria-label="Coding Guidelines" data-md-component="logo">
+    <a href="../../.." title="Coding Guidelines" class="md-header__button md-logo" aria-label="Coding Guidelines" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -91,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Einleitung
+              Logging
             
           </span>
         </div>
@@ -102,20 +102,20 @@
       <div class="md-header__option">
         <div class="md-select">
           
-          <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+          <button class="md-header__button md-icon" aria-label="Select language">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24z"/></svg>
           </button>
           <div class="md-select__inner">
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="../" hreflang="en" class="md-select__link">
+                  <a href="../../../" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="./" hreflang="de" class="md-select__link">
+                  <a href="../../../de/" hreflang="de" class="md-select__link">
                     Deutsch
                   </a>
                 </li>
@@ -134,14 +134,14 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Suche">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Zurücksetzen" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
         </button>
       </nav>
@@ -151,7 +151,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Suche wird initialisiert
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -163,7 +163,7 @@
     
       <div class="md-header__source">
         
-<a href="https://github.com/ManticSic/coding-guidelines/" title="Quellcode" class="md-source" data-md-component="source">
+<a href="https://github.com/ManticSic/coding-guidelines/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -189,19 +189,19 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
-      Einleitung
+    <a href="../../.." class="md-tabs__link">
+      Introduction
     </a>
   </li>
 
       
         
   
+  
+    
   
 
 
@@ -214,7 +214,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="guidelines/general/11000/" class="md-tabs__link">
+      <a href="../11000/" class="md-tabs__link md-tabs__link--active">
         Guidelines
       </a>
     </li>
@@ -243,7 +243,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Coding Guidelines" class="md-nav__button md-logo" aria-label="Coding Guidelines" data-md-component="logo">
+    <a href="../../.." title="Coding Guidelines" class="md-nav__button md-logo" aria-label="Coding Guidelines" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -254,7 +254,7 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/ManticSic/coding-guidelines/" title="Quellcode" class="md-source" data-md-component="source">
+<a href="https://github.com/ManticSic/coding-guidelines/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -273,86 +273,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Einleitung
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Einleitung
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Introduction
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhaltsverzeichnis
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#was-ist-das" class="md-nav__link">
-    Was ist das?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#warum-solltest-du-dieses-dokument-nutzen" class="md-nav__link">
-    Warum solltest Du dieses Dokument nutzen?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#grundlagen" class="md-nav__link">
-    Grundlagen
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wie-fange-ich-an" class="md-nav__link">
-    Wie fange ich an?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inspiration" class="md-nav__link">
-    Inspiration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#handelt-es-sich-hierbei-um-einen-standard" class="md-nav__link">
-    Handelt es sich hierbei um einen Standard?
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -363,12 +288,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Guidelines
@@ -384,12 +311,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
       <label class="md-nav__link" for="__nav_2_1">
         General
@@ -407,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guidelines/general/11000/" class="md-nav__link">
+      <a href="../11000/" class="md-nav__link">
         Version Control
       </a>
     </li>
@@ -419,7 +348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guidelines/general/12000/" class="md-nav__link">
+      <a href="../12000/" class="md-nav__link">
         Update Policy
       </a>
     </li>
@@ -431,8 +360,8 @@
   
   
     <li class="md-nav__item">
-      <a href="guidelines/general/13000/" class="md-nav__link">
-        Tools und Automatisierung
+      <a href="../13000/" class="md-nav__link">
+        Tools and Automation
       </a>
     </li>
   
@@ -443,8 +372,8 @@
   
   
     <li class="md-nav__item">
-      <a href="guidelines/general/14000/" class="md-nav__link">
-        Namenskonvention
+      <a href="../14000/" class="md-nav__link">
+        Namming Conventions
       </a>
     </li>
   
@@ -455,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guidelines/general/15000/" class="md-nav__link">
+      <a href="../15000/" class="md-nav__link">
         Maintainability
       </a>
     </li>
@@ -467,8 +396,8 @@
   
   
     <li class="md-nav__item">
-      <a href="guidelines/general/16000/" class="md-nav__link">
-        Dokumentation
+      <a href="../16000/" class="md-nav__link">
+        Documentation
       </a>
     </li>
   
@@ -477,11 +406,65 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="guidelines/general/17000/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Logging
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Logging
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#always-use-a-logging-framework-gcg17001" class="md-nav__link">
+    Always use a logging framework (GCG17001) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-the-usage-of-log-levels-gcg17002" class="md-nav__link">
+    Define the usage of log levels (GCG17002) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structured-logging-gcg17003" class="md-nav__link">
+    Structured Logging (GCG17003) 
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -491,8 +474,8 @@
   
   
     <li class="md-nav__item">
-      <a href="guidelines/general/18000/" class="md-nav__link">
-        Exceptions und Prozessbeendigung
+      <a href="../18000/" class="md-nav__link">
+        Exceptions and Process Termination
       </a>
     </li>
   
@@ -522,7 +505,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -531,48 +514,27 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Inhaltsverzeichnis
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#was-ist-das" class="md-nav__link">
-    Was ist das?
+  <a href="#always-use-a-logging-framework-gcg17001" class="md-nav__link">
+    Always use a logging framework (GCG17001) 
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#warum-solltest-du-dieses-dokument-nutzen" class="md-nav__link">
-    Warum solltest Du dieses Dokument nutzen?
+  <a href="#define-the-usage-of-log-levels-gcg17002" class="md-nav__link">
+    Define the usage of log levels (GCG17002) 
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#grundlagen" class="md-nav__link">
-    Grundlagen
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wie-fange-ich-an" class="md-nav__link">
-    Wie fange ich an?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inspiration" class="md-nav__link">
-    Inspiration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#handelt-es-sich-hierbei-um-einen-standard" class="md-nav__link">
-    Handelt es sich hierbei um einen Standard?
+  <a href="#structured-logging-gcg17003" class="md-nav__link">
+    Structured Logging (GCG17003) 
   </a>
   
 </li>
@@ -589,101 +551,64 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/ManticSic/coding-guidelines/edit/main/coding-guidelines/docs/index.de.md" title="Seite editieren" class="md-content__button md-icon">
+                  <a href="https://github.com/ManticSic/coding-guidelines/edit/main/coding-guidelines/docs/guidelines/general/17000.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="einleitung">Einleitung</h1>
-<h2 id="was-ist-das">Was ist das?</h2>
-<p>Dieses Dokument soll versuchen Richtlinien und Standards über mehrere
-Programmiersprachen hinweg zu definieren. Natürlich muss man sich auch daran
-halten, was man selber predigt, weshalb aus meiner täglichen Arbeitsweise
-entstanden sind und diese auch wiederspiegeln. Nicht alle Punkte sind rational
-zu begründen, einige sind einfach Entscheidungen, die ich für mich getroffen
-habe, da es mehrere <em>richtige</em> Weisen gibt. Am Ende spielt das allerdings
-alles keine Rolle, solange man sich konsistent an seine eigenen Regeln hält.</p>
-<h2 id="warum-solltest-du-dieses-dokument-nutzen">Warum solltest Du dieses Dokument nutzen?</h2>
-<p>Auch wenn manche der Meinung sind, dass Coding Guidelines unnötiger Overhead
-sind oder die Kreativität einschränken, hat sich dieser Ansatz bereits über
-mehrere Jahre hin bewährt. Das liegt daran, dass nicht jedem/jeder Entwickler:</p>
-<ul>
-<li>bewusst ist, dass Code in der Regel 10-mal häufiger gelesen als geändert wird.</li>
-<li>bewusst ist, dass manche Konstrukte Probleme verursachen, selbst wenn sie
-  in anderen Programmiersprachen gut funktionieren</li>
-<li>der Einfluss von bestimmten Lösungen in Bezug auf z. B. Sicherheit oder
-  Performance, oder das Ignorieren solcher, bekannt ist.</li>
-<li>versteht, dass andere Entwickler eventuell nicht genug Erfahrung oder
-  Know-How haben um elegante aber möglicherweise abstrakte Lösungen zu
-  verstehen.</li>
-</ul>
-<h2 id="grundlagen">Grundlagen</h2>
-<p>Selbst wenn dieses Dokument viele Punkte abdeckt, wird es nie alle möglichen
-Szenarien behandeln, alleine um es nicht übermäßig aufzublähen. Und entgegen
-der Meinung mancher (Junior) Developers, heißt es nicht, nur weil etwas nicht
-ausdrücklich als schlecht aufgeführt wird, dass die Nutzung davon okay ist.</p>
-<p>Es gibt eine handvoll Regeln, die auf alle Situationen, unabhängig von ihrem
-Kontext, angewendet werden können. Dazu zählen folgende:</p>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Principle_of_least_astonishment">Principle of least astonishment (a.k.a. POLA)</a>: Entwickler Lösungen die
-  jeder Versteht und erwartet.</li>
-<li><a href="https://en.wikipedia.org/wiki/KISS_principle">Keep it simple, stupid (a.k.a. KISS)</a>: Die einfachste Lösung ist mehr
-  als ausreichend.</li>
-<li><a href="https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it">You aren't gonna need it (a.k.a. YAGIN)</a>: Erstelle Lösungen nur für
-  Probleme und Anforderungen die aktuell bestehen, nicht für welche, von denen
-  Du denkst, dass sie in Zukunft gefordert werden. Kannst Du wirklich in Zukunft
-  schauen?</li>
-<li><a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">Don't repeat yourself (a.k.a. DRY)</a>: Vermeide doppelten Code innerhalb
-  einer Komponente, eines VCS Repositories oder einem
-  <a href="https://martinfowler.com/bliki/BoundedContext.html">bounded context</a>, aber beachte die Regel
-  <a href="https://lostechies.com/derickbailey/2012/10/31/abstraction-the-rule-of-three/">Rule of Three</a>.</li>
-<li>Die vier Prinzipien von <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Objektorientierte Programmierung</a>: Encapsulation
-  (Datenkapselung), Abstraction (Abstraktion), Inheritance (Vererbung) und
-  Polymorphism (Polymorphie)</li>
-<li>Automatisch generierter Code muss in der Regel <em>nicht</em> den Coding Guidelines
-  entsprechen. Wenn es dennoch möglich ist, den Code weitestgehend den
-  Guidelines anzupassen, dann sollte man das machen. Code, der einmalig
-  generiert wird, sollte immer angepasst werden.</li>
-</ul>
-<p>Unabhängig davon, wie elegant etwas gelöst wurde, wenn es zu komplex für
-<em>normale</em> Entwickler ist, es zu ungewöhnlichen Verhalten führt oder es versucht
-zukünftig Probleme zu lösen, dann ist es vermutlich die falsche Lösung und
-sollte neu implementiert werden. Die schlechteste Reaktion eines Entwicklers,
-wenn man ihn oder sie darauf aufmerksam macht, ist „But it works!“.</p>
-<h2 id="wie-fange-ich-an">Wie fange ich an?</h2>
-<ul>
-<li>Bitte alle Entwickler dieses Dokument einmal aufmerksam und komplett zu lesen.
-  Damit erhalten sie ein erstes Gespür für die hier enthaltenen Regeln.</li>
-<li>Stelle sicher, dass alle mit den Regeln einverstanden sind.</li>
-<li>Erstelle eine <a href="https://www.continuousimprover.com/2010/03/alm-practices-5-checklists.html">Projekt Checklist</a> mit den für euch
-  wichtigsten Punkten, die bei jeder der <a href="https://www.continuousimprover.com/2010/02/tfs-development-practices-part-2-peer.html">Peer Review</a> genutzt wird.</li>
-<li>Überlegt, ob ihr das Originaldokument forken wollt, um eure eigene Version
-  zu erstellen.</li>
-<li>Nutzt Tools, z. B. IDEs, Compiler Plugins oder Buildtools, um die
-  Guidelines einhalten zu können. Die meisten IDEs haben eine intelligente
-  Code Inspection Engine, die, mit etwas Konfiguration,
-  viele der Punkte abdecken kann.</li>
-</ul>
-<h2 id="inspiration">Inspiration</h2>
-<p>Dieses Dokument ist stark von den
-<a href="https://csharpcodingguidelines.com/">C# Coding Guidelines</a> beeinflusst.</p>
-<p>Bereits in den letzten Jahren habe ich regelmäßig Codesytles oder Coding
-Guidelines entwickelt und in meine Projekte, sowohl privat als auch beruflich,
-eingeführt. Nun möchte ich dieses Wissen nutzen, um etwas allgemein gültiges
-zu schreiben und der Masse zur Verfügung zu stellen.</p>
-<h2 id="handelt-es-sich-hierbei-um-einen-standard">Handelt es sich hierbei um einen Standard?</h2>
-<p>Nein! Es wird nicht erwartet, dass sich jedes Projekt an diesem Dokument
-orientiert. Es soll eine Hilfestellung für jeden sein, der sich nicht selbst
-damit beschäftigen möchte, aber dennoch innerhalb eines Teams, aber auch
-über mehrere Teams hinweg, eine homogene Developerexperience haben möchte.</p>
-<p>Um bei Entscheidungen zu helfen, welche Regeln wie wichtig sein können, habe ich
-den Guidelines ein Empfehlungslevel beigefügt:</p>
-<p><img src="/img/1.png" alt="recommendation level 1" /> Guidelines, die Du in
-allen Situationen anwenden solltest.</p>
-<p><img src="/img/2.png" alt="recommendation level 2" /> Dringend empfohlene
-Guidelines.</p>
-<p><img src="/img/3.png" alt="recommendation level 1" /> Möglicherweise nicht in
-allen Situationen anwendbar.</p>
+                <h1 id="logging">Logging</h1>
+<h2 id="always-use-a-logging-framework-gcg17001">Always use a logging framework (GCG17001) <img src="/img/1.png" alt="recommendation level 1" /></h2>
+<p>Always use a  well-established logging framework. They contain all necessary
+features. Additionally, they have been tested in practice and only contains a few
+bugs.</p>
+<p><strong>Exception: </strong> Small application, interactive console applications and scripts
+whose output does not need to be tracked, do not require a logging framework.</p>
+<h2 id="define-the-usage-of-log-levels-gcg17002">Define the usage of log levels (GCG17002) <img src="/img/1.png" alt="recommendation level 1" /></h2>
+<p><strong>Suggestion: </strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Log level</th>
+<th align="left">Description</th>
+<th align="left">Importance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Trace</td>
+<td align="left">The most fine-grained information only used in rare cases where you need the full visibility of what is happening in your application. Can be used to annotate each step in a complex algorithm.</td>
+<td align="left">Can be ignored during normal operations. A log level describing events showing step by step.</td>
+</tr>
+<tr>
+<td align="left">Debug</td>
+<td align="left">Less granular compared to <code>Trace</code>, but it is more than you will need in everyday use. Should be used for information that may be needed for diagnosis issues and troubleshooting or when running application in the test environment for purpose of making sure everything is running correctly</td>
+<td align="left">Can be ignored during normal operations. A log level used for events considered to be useful during software debugging.</td>
+</tr>
+<tr>
+<td align="left">Info</td>
+<td align="left">The standard log level indicating that something happened, the application entered a certain state, etc. This log level should be purely informative and not looking into them on a regular basis shouldn't result in missing any important information.</td>
+<td align="left">Can be ignored during normal operations. An event happened, the event is purely informative.</td>
+</tr>
+<tr>
+<td align="left">Warn</td>
+<td align="left">The log level that indicates that something unexpected happened in the application, a problem, or a situation that might disturb one of the processes. That doesn't mean that the application failed. Should be used in situations that are unexpected, but the code can continue the work.</td>
+<td align="left">Unexpected behavior happened inside the application, but it is continuing its work, and the key business features are operating as expected.</td>
+</tr>
+<tr>
+<td align="left">Error</td>
+<td align="left">The log level that should be used when the application hits an issue preventing one or more functionalities from  properly functioning.</td>
+<td align="left">One or more functionalities are not working, preventing some functionalities from working correctly.</td>
+</tr>
+<tr>
+<td align="left">Fatal, Critical</td>
+<td align="left">The log level that tells that the application encountered an event or entered a state in which one of the crucial business functionality is no longer working. May be used when the application is not able to connect to a crucial data store. Often the application is shutting down.</td>
+<td align="left">One or more key business functionalities are not working, and the whole system doesn't fulfill the business functionalities.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="structured-logging-gcg17003">Structured Logging (GCG17003) <img src="/img/1.png" alt="recommendation level 1" /></h2>
+<p>Structured logging<sup><a href="https://www.sumologic.com/glossary/structured-logging/">1</a>,<a href="https://stackify.com/what-is-structured-logging-and-why-developers-need-it/">2</a></sup>
+helps to process log files.</p>
                 
                   
                     
@@ -692,7 +617,7 @@ allen Situationen anwendbar.</p>
 <div class="md-source-date">
   <small>
     
-      Letztes Update: 2021-08-12
+      Last update: 2021-08-12
     
   </small>
 </div>
@@ -710,7 +635,7 @@ allen Situationen anwendbar.</p>
         
           <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
-            Zurück zum Seitenanfang
+            Back to top
           </a>
         
       </main>
@@ -720,15 +645,30 @@ allen Situationen anwendbar.</p>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-      
         
-        <a href="guidelines/general/11000/" class="md-footer__link md-footer__link--next" aria-label="Weiter: Version Control" rel="next">
+        <a href="../16000/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Documentation" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
-                Weiter
+                Previous
               </span>
-              Version Control
+              Documentation
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../18000/" class="md-footer__link md-footer__link--next" aria-label="Next: Exceptions and Process Termination" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Exceptions and Process Termination
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -761,10 +701,10 @@ allen Situationen anwendbar.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "translations": {"clipboard.copy": "In Zwischenablage kopieren", "clipboard.copied": "In Zwischenablage kopiert", "search.config.lang": "de", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Suche", "search.result.placeholder": "Suchbegriff eingeben", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.term.missing": "Es fehlt", "select.version.title": "Version ausw\u00e4hlen"}, "search": "../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.716f8af4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.716f8af4.min.js"></script>
       
     
   </body>
