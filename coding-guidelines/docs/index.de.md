@@ -81,7 +81,7 @@ Guidelines entwickelt und in meine Projekte, sowohl privat als auch beruflich,
 eingeführt. Nun möchte ich dieses Wissen nutzen, um etwas allgemein gültiges
 zu schreiben und der Masse zur Verfügung zu stellen.
 
-## Handelt es sich hierbei um einen Standard?
+## Handelt es sich hierbei um einen offiziellen Standard?
 Nein! Es wird nicht erwartet, dass sich jedes Projekt an diesem Dokument
 orientiert. Es soll eine Hilfestellung für jeden sein, der sich nicht selbst
 damit beschäftigen möchte, aber dennoch innerhalb eines Teams, aber auch

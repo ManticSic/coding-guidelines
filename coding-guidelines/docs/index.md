@@ -73,7 +73,7 @@ In the last years I often created some kind of code styles and coding
 guidelines, which I used in both, private and professional projects. Now I
 would like to use this knowledge to write some general guidelines.
 
-## Is this a coding standard?
+## Is this a official coding standard?
 Definitely not! This document does not state that projects must comply with
 these guidelines, neither does it say which guidelines are more important than
 other. It is intended to be a guide for anyone who does not want to deal with
