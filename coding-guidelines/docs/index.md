@@ -16,7 +16,7 @@ years. This is because not every developer:
 
 - is aware that code is generally read 10 times more than it is changed.
 - is aware of the potential pitfalls in one programming language, which are
-  a good way in other.
+  a good way in others.
 - is aware of the impact of using (or neglecting to use) particular solutions
   on aspects like security, performance, multi-language support, etc.
 - realizes that not every developer is as capable, skilled or experienced to
@@ -29,7 +29,7 @@ something is not explicitly listed as bad, it does not mean that using it is
 okay.
 
 There is a set of rules than can be applied to all situations, regardless of
-their context. The include the following:
+their context. These include the following:
 
 - [Principle of least astonishment (a.k.a. POLA)][pola]: you should choose
   solution that everyone can understand, and that keeps them on the right track.
@@ -53,16 +53,16 @@ ordinary developer, exposes unusual behavior, or tries to solve many possible
 future issues, it es very likely the wrong solution and needs redesign. The
 worst response a developer can give yo to these principles is: "But it works!".
 
-## Wie fange ich an?
+## How do you get started?
 - Ask all developers to carefully read this document at least once. This will
-  give them a sense of the kind of guidelines the document containes.
-- Make sure evereybody agrees with the rules.
+  give them a sense of the kind of guidelines the document contains.
+- Make sure everybody agrees with the rules.
 - Create a [project checklist][project-checklist] with the most important rules
   and use this checklist for your [Peer Review][peer-review].
 - Consider forking the original source and create your own internal version of
   the document.
-- Use tools, e. g. IDEs, compiler plugins or build tools, to be able to comply
-  with these guidelines. THe most IDEs have a intelligent code instpection
+- Use tools, e.g. IDEs, compiler plugins or build tools, to be able to comply
+  with these guidelines. THe most IDEs have a intelligent code inspection
   engine, with some configuration, already supporting many aspects of the
   Coding Guidelines.
 
@@ -73,10 +73,10 @@ In the last years I often created some kind of code styles and coding
 guidelines, which I used in both, private and professional projects. Now I
 would like to use this knowledge to write some general guidelines.
 
-## Is this a official coding standard?
+## Is this an official coding standard?
 Definitely not! This document does not state that projects must comply with
 these guidelines, neither does it say which guidelines are more important than
-other. It is intended to be a guide for anyone who does not want to deal with
+others. It is intended to be a guide for anyone who does not want to deal with
 creating own rules but still wants to have a homogeneous developer experience
 within one team, but also across multiple teams.
 
